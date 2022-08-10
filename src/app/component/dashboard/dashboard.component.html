@@ -1,0 +1,33 @@
+<p>dashboard works!</p>
+<section class="dashboard">
+    <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Gains
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button class="day dropdown-item" (click)="getGain('last day')">Last day</button>
+            <button class="dropdown-item" (click)="getGain('last week')">Last week</button>
+            <button class="dropdown-item" (click)="getGain('last month')">Last month</button>
+            <button class="dropdown-item" (click)="getGain('totle')">total</button>
+        </div>
+
+          <div class="gains">
+            <!-- 1 .. last day  2.. total price from )ts  -->
+           <h1>Total Gains {{GainBySelected}} : <span>5000</span> LE </h1>
+          </div>
+          <h3>Comments</h3>
+          <div class="commentReview">
+                <div class="commentReviewContainer"> <!-- make ngfor on this line-->
+                    <div class="comment">Comment 1</div>
+                    <div class="Reviews">Rate : 4 /  5</div>
+                </div>
+
+                <div class="commentReviewContainer"> <!-- make ngfor on this line-->
+                    <div class="comment">Comment 1</div>
+                    <div class="Reviews">                         
+                        Rate : <span> 4 /  5 </span>
+                    </div>
+                </div>
+          </div>
+      </div>
+</section>
